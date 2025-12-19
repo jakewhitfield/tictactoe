@@ -1,16 +1,16 @@
 class Board:
     def __init__(self):
         self.board = [[" " for x in range(3)] for y in range(3)]
-        self.empty_line = "   "
+        self.empty_line = "     "
         self.turns_completed = 0
 
     def draw_board(self):
-        print("-------------")
+        print("-------------------")
         for z in range(3):
-            print("|" + self.empty_line + "|" + self.empty_line + "|" + self.empty_line + "|")
-            print("| " + self.board[z][0] + " | " + self.board[z][1] + " | " + self.board[z][2] + " |")
-            print("|" + self.empty_line + "|" + self.empty_line + "|" + self.empty_line + "|")
-            print("-------------")
+            # print("|" + self.empty_line + "|" + self.empty_line + "|" + self.empty_line + "|")
+            print("|  " + self.board[z][0] + "  |  " + self.board[z][1] + "  |  " + self.board[z][2] + "  |")
+            # print("|" + self.empty_line + "|" + self.empty_line + "|" + self.empty_line + "|")
+            print("-------------------")
 
     def add_to_board(self, x_coord, y_coord, player):
         if self.board[x_coord][y_coord] == " ":
